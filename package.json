@@ -30,8 +30,9 @@
     "author": "Kumindu Induranga Ranawaka",
     "license": "ISC",
     "dependencies": {
+        "aws-serverless-express": "^3.3.6",
         "cors": "^2.8.5",
-        "express": "^4.17.1",
-        "uuid": "^8.3.2"
+        "express": "^4.16.4",
+        "uuid": "^3.3.2"
     }
 }
