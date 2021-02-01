@@ -11,7 +11,7 @@ const dynamoDb = IS_OFFLINE === true ?
 
 const PROFILE_TABLE = process.env.PROFILE_TABLE;
 
-exports.getAllProfile = (req, res) => {
+exports.getAllProfiles = (req, res) => {
     const params = {
         TableName: PROFILE_TABLE
     };
