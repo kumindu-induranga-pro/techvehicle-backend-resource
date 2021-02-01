@@ -11,7 +11,7 @@ const dynamoDb = IS_OFFLINE === true ?
 
 const FUELTYPE_TABLE = process.env.FUELTYPE_TABLE;
 
-exports.getAllfuelType = (req, res) => {
+exports.getAllfuelTypes = (req, res) => {
     const params = {
         TableName: FUELTYPE_TABLE
     };
