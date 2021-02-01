@@ -11,7 +11,7 @@ const dynamoDb = IS_OFFLINE === true ?
 
 const MODEL_TABLE = process.env.MODEL_TABLE;
 
-exports.getAllModel = (req, res) => {
+exports.getAllModels = (req, res) => {
     const params = {
         TableName: MODEL_TABLE
     };
