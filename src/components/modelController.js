@@ -1,4 +1,3 @@
-const dynamoDb = require('dynamoDb');
 const AWS = require('aws-sdk');
 const uuid = require('uuid');
 
