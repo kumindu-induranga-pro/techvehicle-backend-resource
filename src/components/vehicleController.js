@@ -13,7 +13,7 @@ const dynamoDb = IS_OFFLINE === true ?
 const VEHICLE_TABLE = process.env.VEHICLE_TABLE;
 
 
-exports.getAllVehicle = (req, res) => {
+exports.getAllVehicles = (req, res) => {
     const params = {
         TableName: VEHICLE_TABLE
     };
