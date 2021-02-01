@@ -8,7 +8,7 @@
         "deploy": "npm run clean && npm run build && aws lambda update-function-code --function-name techvehicle --zip-file fileb://build.zip --publish",
         "clean": "rm build.zip",
         "build": "zip -r build.zip node_modules index.js public src LICENSE.File README.md",
-        "start": "BRANDS_TABLE='brands' CATEGORIES_TABLE='categories' CENTER_TABLE='centers' CHECKLIST_TABLE='checkLists' FUELTYPE_TABLE='fueltypes' MODEL_TABLE='models' PROFILE_TABLE='profiles' SERVICE_TABLE='services' VEHICLE_TABLE='vehicles' node app-local",
+        "start": "BRANDS_TABLE='brands' CATEGORIES_TABLE='categories' CENTER_TABLE='centers' CHECKLIST_TABLE='checkLists' FUELTYPE_TABLE='fueltypes' MODEL_TABLE='models' PROFILE_TABLE='profiles' SERVICE_TABLE='services' VEHICLE_TABLE='vehicles' node src/app-local",
         "dynamodb-local-run": "docker-compose up",
         "create-database-brand": "aws dynamodb create-table --cli-input-json file://src/models/brand.json --endpoint-url http://localhost:8080",
         "create-database-category": "aws dynamodb create-table --cli-input-json file://src/models/category.json --endpoint-url http://localhost:8080",
