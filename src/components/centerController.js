@@ -4,7 +4,7 @@ const uuid = require('uuid');
 
 const dynamoDb = IS_OFFLINE === true ?
     new AWS.DynamoDB.DocumentClient({
-        region: 'eu-west-2',
+        region: 'us-east-2',
         endpoint: 'http://127.0.0.1:8080',
     }) : new AWS.DynamoDB.DocumentClient();
 
