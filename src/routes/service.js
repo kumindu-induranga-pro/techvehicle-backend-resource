@@ -1,15 +1,15 @@
-const vehicleController = require('../components/vehicleController');
+const serviceController = require('../components/serviceController');
 const express = require('express');
 const router = express.Router();
 
-router.get('/', vehicleController.getAllVehicles);
+router.get('/', serviceController.getAllServices);
 
-router.post('/', vehicleController.postNewVehicle);
+router.post('/', serviceController.postNewService);
 
-router.get('/:id', vehicleController.getVehicle);
+router.get('/:id', serviceController.getService);
 
-router.put('/:id', vehicleController.updateVehicle);
+router.put('/:id', serviceController.updateService);
 
-router.delete('/:id', vehicleController.deleteVehicle);
+router.delete('/:id', serviceController.deleteService);
 
 module.exports = router;
