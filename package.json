@@ -7,7 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "deploy": "npm run clean && npm run build && aws lambda update-function-code --function-name techvehicle --zip-file fileb://techvehicle.zip --region us-east-2 --publish",
         "clean": "rm techvehicle.zip",
-        "build": "zip -r techvehicle.zip node_modules ",
+        "build": "zip -r techvehicle.zip index.js src public",
         "start": "BRANDS_TABLE='brands' CATEGORIES_TABLE='categories' CENTER_TABLE='centers' CHECKLIST_TABLE='checkLists' FUELTYPE_TABLE='fueltypes' MODEL_TABLE='models' PROFILE_TABLE='profiles' SERVICE_TABLE='services' VEHICLE_TABLE='vehicles' node src/app-local",
         "dynamodb-local-run": "docker-compose up",
         "create-database-brand": "aws dynamodb create-table --cli-input-json file://src/models/brand.json --endpoint-url http://localhost:8080",
