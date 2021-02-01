@@ -14,7 +14,7 @@
         "create-database-category": "aws dynamodb create-table --cli-input-json file://src/models/category.json --endpoint-url http://localhost:8080",
         "create-database-centers": "aws dynamodb create-table --cli-input-json file://src/models/centers.json --endpoint-url http://localhost:8080",
         "create-database-checkList": "aws dynamodb create-table --cli-input-json file://src/models/checkList.json --endpoint-url http://localhost:8080",
-        "create-database-fuelType": "aws dynamodb create-table --cli-input-json file://src/models/fueltype.json --endpoint-url http://localhost:8080",
+        "create-database-fuelType": "aws dynamodb create-table --cli-input-json file://src/models/fuelType.json --endpoint-url http://localhost:8080",
         "create-database-model": "aws dynamodb create-table --cli-input-json file://src/models/model.json --endpoint-url http://localhost:8080",
         "create-database-profile": "aws dynamodb create-table --cli-input-json file://src/models/profile.json --endpoint-url http://localhost:8080",
         "create-database-vehicle": "aws dynamodb create-table --cli-input-json file://src/models/service.json --endpoint-url http://localhost:8080",
