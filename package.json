@@ -1,0 +1,25 @@
+{
+    "name": "techvehicle",
+    "version": "1.0.0",
+    "description": "techvehicle backend resource serve",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "techvehicle",
+        "backend",
+        "node.js",
+        "dyanamodb",
+        "express.js"
+    ],
+    "author": "Kumindu Induranga Ranawaka",
+    "license": "ISC",
+    "dependencies": {
+        "aws-sdk": "^2.430.0",
+        "aws-serverless-express": "^3.3.6",
+        "cors": "^2.8.5",
+        "express": "^4.16.4",
+        "uuid": "^3.3.2"
+    }
+}
