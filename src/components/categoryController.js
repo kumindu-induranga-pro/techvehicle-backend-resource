@@ -1,6 +1,8 @@
 const AWS = require('aws-sdk');
 const uuid = require('uuid');
 
+const IS_OFFLINE = process.env.NODE_ENV !== 'production';
+
 const dynamoDb = IS_OFFLINE === true ?
     new AWS.DynamoDB.DocumentClient({
         region: 'us-east-2',
