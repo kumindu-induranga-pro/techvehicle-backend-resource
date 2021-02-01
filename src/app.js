@@ -4,15 +4,15 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
-const checkListRoutes = require('./src/routes/checkList');
-const fuelTypeRoutes = require('./src/routes/fuelType');
-const categoryRoutes = require('./src/routes/category');
-const centersRoutes = require('./src/routes/centers');
-const profileRoutes = require('./src/routes/profile');
-const serviceRoutes = require('./src/routes/service');
-const vehicleRoutes = require('./src/routes/vehicle');
-const modelRoutes = require('./src/routes/model');
-const brandRoutes = require('./src/routes/brand');
+const checkListRoutes = require('./routes/checkList');
+const fuelTypeRoutes = require('./routes/fuelType');
+const categoryRoutes = require('./routes/category');
+const centersRoutes = require('./routes/centers');
+const profileRoutes = require('./routes/profile');
+const serviceRoutes = require('./routes/service');
+const vehicleRoutes = require('./routes/vehicle');
+const modelRoutes = require('./routes/model');
+const brandRoutes = require('./routes/brand');
 
 app.use('/checkList', checkListRoutes);
 
