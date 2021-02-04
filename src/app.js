@@ -16,6 +16,7 @@ const serviceRoutes = require('./routes/service');
 const vehicleRoutes = require('./routes/vehicle');
 const modelRoutes = require('./routes/model');
 const brandRoutes = require('./routes/brand');
+const partRoutes = require('./routes/part');
 
 app.use('/checkList', checkListRoutes);
 
@@ -35,5 +36,6 @@ app.use('/model', modelRoutes);
 
 app.use('/brand', brandRoutes);
 
+app.use('/part', partRoutes);
 
 module.exports = app;
