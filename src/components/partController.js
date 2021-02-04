@@ -84,25 +84,16 @@ exports.updatePart = (req, res) => {
     const sub_type = req.body.sub_type;
     const name = req.body.name;
     const type = req.body.type;
-    const id = uuid.v4();
+    const id = req.params.id;
 
     const params = {
         TableName: PARTS_TABLE,
         Key: {
-            id
+            id,
         },
-        UpdateExpression: 'set #name = :name',
-        ExpressionAttributeNames: { '#name': 'name' },
-        ExpressionAttributeValues: { ':name': name },
-        UpdateExpression: 'set #type = :type',
-        ExpressionAttributeNames: { '#type': 'type' },
-        ExpressionAttributeValues: { ':type': type },
-        UpdateExpression: 'set #sub_type = :sub_type',
-        ExpressionAttributeNames: { '#sub_type': 'sub_type' },
-        ExpressionAttributeValues: { ':sub_type': sub_type },
-        UpdateExpression: 'set #is_optional = :is_optional',
-        ExpressionAttributeNames: { '#is_optional': 'is_optional' },
-        ExpressionAttributeValues: { ':is_optional': is_optional },
+        UpdateExpression: 'set #name = :name, #type = :type ,#sub_type = :sub_type,#is_optional = :is_optional',
+        ExpressionAttributeNames: { '#name': 'name', '#type': 'type', '#sub_type': 'sub_type', '#is_optional': 'is_optional' },
+        ExpressionAttributeValues: { ':name': name, ':type': type, ':sub_type': sub_type, ':is_optional': is_optional },
         ReturnValues: "ALL_NEW"
     }
 

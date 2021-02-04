@@ -105,30 +105,9 @@ exports.updatecheckList = (req, res) => {
         Key: {
             id
         },
-        UpdateExpression: 'set #item = :item',
-        UpdateExpression: 'set #type = :type',
-        UpdateExpression: 'set #cost = :cost',
-        UpdateExpression: 'set #brand = :brand',
-        UpdateExpression: 'set #ischeck = :ischeck',
-        UpdateExpression: 'set #quntity = :quntity',
-        UpdateExpression: 'set #service = :service',
-        UpdateExpression: 'set #timestamp = :timestamp',
-        ExpressionAttributeNames: { '#item': 'item' },
-        ExpressionAttributeValues: { ':item': item },
-        ExpressionAttributeNames: { '#type': 'type' },
-        ExpressionAttributeValues: { ':type': type },
-        ExpressionAttributeNames: { '#cost': 'cost' },
-        ExpressionAttributeValues: { ':cost': cost },
-        ExpressionAttributeNames: { '#brand': 'brand' },
-        ExpressionAttributeValues: { ':brand': brand },
-        ExpressionAttributeNames: { '#quntity': 'quntity' },
-        ExpressionAttributeValues: { ':quntity': quntity },
-        ExpressionAttributeNames: { '#service': 'service' },
-        ExpressionAttributeValues: { ':service': service },
-        ExpressionAttributeNames: { '#ischeck': 'ischeck' },
-        ExpressionAttributeValues: { ':ischeck': ischeck },
-        ExpressionAttributeNames: { '#timestamp': 'timestamp' },
-        ExpressionAttributeValues: { ':timestamp': timestamp },
+        UpdateExpression: 'set #item = :item,#type = :type, #cost = :cost,#brand = :brand, #ischeck = :ischeck, #quntity = :quntity,#service = :service, #timestamp = :timestamp',
+        ExpressionAttributeNames: { '#item': 'item', '#type': 'type', '#cost': 'cost', '#brand': 'brand', '#quntity': 'quntity', '#service': 'service', '#ischeck': 'ischeck', '#timestamp': 'timestamp' },
+        ExpressionAttributeValues: { ':item': item, ':type': type, ':cost': cost, ':brand': brand, ':quntity': quntity, ':service': service, ':ischeck': ischeck, ':timestamp': timestamp },
         ReturnValues: "ALL_NEW"
     }
 

@@ -98,24 +98,9 @@ exports.updateService = (req, res) => {
         Key: {
             id
         },
-        UpdateExpression: 'set #cost = :cost',
-        UpdateExpression: 'set #round = :round',
-        UpdateExpression: 'set #center = :center',
-        UpdateExpression: 'set #userid = :userid',
-        UpdateExpression: 'set #recommand = :recommand',
-        UpdateExpression: 'set #timestamp = :timestamp',
-        ExpressionAttributeNames: { '#cost': 'cost' },
-        ExpressionAttributeValues: { ':cost': cost },
-        ExpressionAttributeNames: { '#round': 'round' },
-        ExpressionAttributeValues: { ':round': round },
-        ExpressionAttributeNames: { '#center': 'center' },
-        ExpressionAttributeValues: { ':center': center },
-        ExpressionAttributeNames: { '#userid': 'userid' },
-        ExpressionAttributeValues: { ':userid': userid },
-        ExpressionAttributeNames: { '#timestamp': 'timestamp' },
-        ExpressionAttributeValues: { ':timestamp': timestamp },
-        ExpressionAttributeNames: { '#recommand': 'recommand' },
-        ExpressionAttributeValues: { ':recommand': recommand },
+        UpdateExpression: 'set #cost = :cost, #round = :round,#center = :center,#userid = :userid,#recommand = :recommand,#timestamp = :timestamp',
+        ExpressionAttributeNames: { '#cost': 'cost', '#round': 'round', '#center': 'center', '#userid': 'userid', '#recommand': 'recommand', '#timestamp': 'timestamp' },
+        ExpressionAttributeValues: { ':cost': cost, ':round': round, ':center': center, ':userid': userid, ':recommand': recommand, ':timestamp': timestamp },
         ReturnValues: "ALL_NEW"
     }
 

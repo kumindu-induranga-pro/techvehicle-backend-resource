@@ -93,21 +93,9 @@ exports.updateCenter = (req, res) => {
         Key: {
             id
         },
-        UpdateExpression: 'set #name = :name',
-        UpdateExpression: 'set #address = :address',
-        UpdateExpression: 'set #zipcode = :zipcode',
-        UpdateExpression: 'set #country = :country',
-        UpdateExpression: 'set #coordinates = :coordinates',
-        ExpressionAttributeNames: { '#name': 'name' },
-        ExpressionAttributeValues: { ':name': name },
-        ExpressionAttributeNames: { '#address': 'address' },
-        ExpressionAttributeValues: { ':address': address },
-        ExpressionAttributeNames: { '#zipcode': 'zipcode' },
-        ExpressionAttributeValues: { ':zipcode': zipcode },
-        ExpressionAttributeNames: { '#country': 'country' },
-        ExpressionAttributeValues: { ':country': country },
-        ExpressionAttributeNames: { '#coordinates': 'coordinates' },
-        ExpressionAttributeValues: { ':coordinates': coordinates },
+        UpdateExpression: 'set #name = :name,#address = :address,#zipcode = :zipcode,#country = :country,#coordinates = :coordinates',
+        ExpressionAttributeNames: { '#name': 'name', '#address': 'address', '#zipcode': 'zipcode', '#country': 'country', '#coordinates': 'coordinates' },
+        ExpressionAttributeValues: { ':name': name, ':address': address, ':zipcode': zipcode, ':country': country, ':coordinates': coordinates },
         ReturnValues: "ALL_NEW"
     }
 

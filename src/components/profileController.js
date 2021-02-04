@@ -101,27 +101,9 @@ exports.updateProfile = (req, res) => {
         Key: {
             id
         },
-        UpdateExpression: 'set #name = :name',
-        UpdateExpression: 'set #image = :image',
-        UpdateExpression: 'set #userid = :userid',
-        UpdateExpression: 'set #address = :address',
-        UpdateExpression: 'set #country = :country',
-        UpdateExpression: 'set #zipcode = :zipcode',
-        UpdateExpression: 'set #coordinates = :coordinates',
-        ExpressionAttributeNames: { '#name': 'name' },
-        ExpressionAttributeValues: { ':name': name },
-        ExpressionAttributeNames: { '#image': 'image' },
-        ExpressionAttributeValues: { ':image': image },
-        ExpressionAttributeNames: { '#address': 'address' },
-        ExpressionAttributeValues: { ':address': address },
-        ExpressionAttributeNames: { '#userid': 'userid' },
-        ExpressionAttributeValues: { ':userid': userid },
-        ExpressionAttributeNames: { '#country': 'country' },
-        ExpressionAttributeValues: { ':country': country },
-        ExpressionAttributeNames: { '#zipcode': 'zipcode' },
-        ExpressionAttributeValues: { ':zipcode': zipcode },
-        ExpressionAttributeNames: { '#coordinates': 'coordinates' },
-        ExpressionAttributeValues: { ':coordinates': coordinates },
+        UpdateExpression: 'set #name = :name,#image = :image, #userid = :userid, #address = :address, #country = :country, #zipcode = :zipcode,#coordinates = :coordinates',
+        ExpressionAttributeNames: { '#name': 'name', '#image': 'image', '#address': 'address', '#userid': 'userid', '#country': 'country', '#zipcode': 'zipcode', '#coordinates': 'coordinates' },
+        ExpressionAttributeValues: { ':name': name, ':image': image, ':address': address, ':userid': userid, ':country': country, ':zipcode': zipcode, ':coordinates': coordinates },
         ReturnValues: "ALL_NEW"
     }
 

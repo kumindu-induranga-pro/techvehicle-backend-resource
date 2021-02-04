@@ -25,6 +25,7 @@ exports.getAllBrands = (req, res) => {
 };
 
 exports.postNewBrand = (req, res) => {
+
     const name = req.body.name;
     const type = req.body.type;
     const id = uuid.v4();
@@ -82,12 +83,9 @@ exports.updateBrand = (req, res) => {
         Key: {
             id
         },
-        UpdateExpression: 'set #name = :name',
-        ExpressionAttributeNames: { '#name': 'name' },
-        ExpressionAttributeValues: { ':name': name },
-        UpdateExpression: 'set #type = :type',
-        ExpressionAttributeNames: { '#type': 'type' },
-        ExpressionAttributeValues: { ':type': type },
+        UpdateExpression: 'set #name = :name ,#type = :type',
+        ExpressionAttributeNames: { '#name': 'name', '#type': 'type' },
+        ExpressionAttributeValues: { ':name': name, ':type': type },
         ReturnValues: "ALL_NEW"
     }
 
